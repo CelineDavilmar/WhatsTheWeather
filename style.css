@@ -1,0 +1,25 @@
+.title {
+    border: solid;
+    text-align: center;
+    display: block;
+}
+
+.Weather-Display {
+    border: solid;
+    width: 70%;
+    margin-left: 30%;
+    height: 30%;
+}
+
+.Weather-Search {
+    border: solid;
+    width: 25%;
+    border-bottom: solid;
+
+}
+
+.Weather-Day-List {
+    border: solid;
+    width: 70%;
+    margin-left: 30%;
+}

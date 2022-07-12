@@ -15,10 +15,20 @@
     </box>
     <box>
         <h1 class="Weather-Display">Weather box</h1>
+        <box>
+            City Name = ${city.name}
+            Sunrise = ${city.sun.rise}
+            Sunset = city.sun.set
+            temp = temperature.value
+        </box>
+        <box></box>
+        <box></box>
+        <box></box>
     </box>
-    <box>
+    <box class="searchbox">
         <h1 class="Weather-Search">Search for city</h1>
-        <input />
+        <input type="text" placeholder="Enter desired city" autofocus>
+        <button type="submit">SUBMIT</button>
     </box>
     <box>
         <h1 class="Weather-Day-List">5 day forecast</h1>

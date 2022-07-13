@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="./style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akshar&family=Patrick+Hand&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
     <title>Weather</title>
 </head>
 
@@ -15,23 +20,78 @@
     </box>
     <box>
         <h1 class="Weather-Display">Weather box</h1>
-        <box>
+        <box class="weather-component1">
             City Name = ${city.name}
             Sunrise = ${city.sun.rise}
             Sunset = city.sun.set
             temp = temperature.value
         </box>
-        <box></box>
-        <box></box>
-        <box></box>
+        <box class="weather-component2">
+            City Name = ${city.name}
+            Sunrise = ${city.sun.rise}
+            Sunset = city.sun.set
+            temp = temperature.value
+        </box>
+        <box class="weather-component3">
+            City Name = ${city.name}
+            Sunrise = ${city.sun.rise}
+            Sunset = city.sun.set
+            temp = temperature.value
+        </box>
+        <box class="weather-component4">
+            City Name = ${city.name}
+            Sunrise = ${city.sun.rise}
+            Sunset = city.sun.set
+            temp = temperature.value
+        </box>
     </box>
     <box class="searchbox">
-        <h1 class="Weather-Search">Search for city</h1>
-        <input type="text" placeholder="Enter desired city" autofocus>
-        <button type="submit">SUBMIT</button>
+        <h1 class="Weather-Search">Search For City</h1>
+        <input class="input" type="text" placeholder="Enter desired city" autofocus>
+        <button class="submit" type="submit">SUBMIT</button>
     </box>
     <box>
         <h1 class="Weather-Day-List">5 day forecast</h1>
+        <box class="day-component1">
+            Monday
+            <ul>
+                <li>Sunrise = ${city.sun.rise}</li>
+                <li>Sunset = city.sun.set</li>
+                <li>temp = temperature.value</li>
+            </ul>
+        </box>
+        <box class="day-component2">
+            Tuesday
+            <ul>
+                <li>Sunrise = ${city.sun.rise}</li>
+                <li>Sunset = city.sun.set</li>
+                <li>temp = temperature.value</li>
+            </ul>
+        </box>
+        <box class="day-component3">
+            Wednesday
+            <ul>
+                <li>Sunrise = ${city.sun.rise}</li>
+                <li>Sunset = city.sun.set</li>
+                <li>temp = temperature.value</li>
+            </ul>
+        </box>
+        <box class="day-component4">
+            Thursday
+            <ul>
+                <li>Sunrise = city.sun.rise}</li>
+                <li>Sunset = city.sun.set</li>
+                <li>temp = temperature.value</li>
+            </ul>
+        </box>
+        <box class="day-component5">
+            Friday
+            <ul>
+                <li>Sunrise = ${city.sun.rise}</li>
+                <li>Sunset = city.sun.set</li>
+                <li>temp = temperature.value</li>
+            </ul>
+        </box>
     </box>
 </body>
 

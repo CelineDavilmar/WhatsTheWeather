@@ -7,7 +7,7 @@
 * [Usage](#Usage)
 
 ## Description
-Developers Engaging Virtually (DEV) was conceptualized with the premise of bringing an already large community of developers together using short form blogging
+The application uses a weather API to collect weather data for a specific longitude and latitude and dispplays it to the screen.
 
 
 ## Technologies

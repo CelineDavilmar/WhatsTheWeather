@@ -49,7 +49,7 @@ var weatherApp = {
         list.appendChild(li);
     },
     submit: function () {
-        this.showWeatherApp(document.querySelector().value)
+        this.showWeatherApp(document.querySelector(".submit").value)
     }
 };
 document.getElementByClass("submit").addEventListener("click", function () {

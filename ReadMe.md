@@ -20,3 +20,6 @@ Technologies used include:
 ## Usage
 If a user needs to know what the weather will be before heading out, this web application will assist.
 
+## Screenshot
+
+<img src="pic1.png" alt="Alt text" title="Optional title">

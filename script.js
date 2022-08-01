@@ -4,7 +4,7 @@ const inputVal = document.querySelector(".input");
 //const appurl = `https://api.openweathermap.org/data/2.5/onecall?lat=${33.44}&lon=${-94.04}&exclude=hourly,daily&appid=${apiKey}`;
 
 function getWeather(city) {
-    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey)
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial")
         .then(function (response) {
             return response.json()
         })
@@ -23,11 +23,14 @@ function showWeatherApp(data) {
     console.log(data.list[0].wind.speed);
     console.log(data.city.sunset);
     console.log(data.city.sunrise);
+    var icon = 'https://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png';
+    $('#wicon').attr('src', icon);
+    F = ((data.list[0].main.temp) * 9) / 5 + 32;
+    var temp = Math.round(data.list[0].main.temp);
     $(document).ready(function () {
         $(".city").html("City: " + data.city.name);
         $(".country").html("Country: " + data.city.country);
-        $(".icon").html(data.list[0].weather[0].icon);
-        $(".temp").html("Temp: " + data.list[0].main.temp);
+        $(".temp").html("Temp: " + temp + "F");
         $(".wind").html("Wind Speed: " + data.list[0].wind.speed);
         $(".humidity").html("Humidity: " + data.list[0].main.humidity);
 
@@ -58,9 +61,14 @@ function submit() {
     this.showWeatherApp(document.querySelector(".submit").value)
 }
 
+var searchedCities = function () {
+    localStorage.setItem("cities", JSON.stringify(inputVal.value));
+};
 
 var submitButton = document.querySelector(".submit").addEventListener("click", function () {
     //console.log(inputVal.value);
     getWeather(inputVal.value);
+    searchedCities();
 })
+
 

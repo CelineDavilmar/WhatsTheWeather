@@ -21,13 +21,17 @@ function showWeatherApp(data) {
     console.log(data.list[0].main.temp);
     console.log(data.list[0].main.humidity);
     console.log(data.list[0].wind.speed);
+    console.log(data.list[0].clouds.dt);
     console.log(data.city.sunset);
     console.log(data.city.sunrise);
     var icon = 'https://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png';
     $('#wicon').attr('src', icon);
     F = ((data.list[0].main.temp) * 9) / 5 + 32;
     var temp = Math.round(data.list[0].main.temp);
+    var date = data.list[0].dt_txt;
+    console.log(date);
     $(document).ready(function () {
+        $(".date").html(date);
         $(".city").html("City: " + data.city.name);
         $(".country").html("Country: " + data.city.country);
         $(".temp").html("Temp: " + temp + "F");
